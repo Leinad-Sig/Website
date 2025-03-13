@@ -1,8 +1,10 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: 'https://leinad-sig.github.io/Website/',
+  base: '/Website/', // Replace 'website' with your repo name if needed
+  build: {
+    outDir: 'docs',  // <--- Output folder is now "docs"
+  },
   plugins: [react()],
-})
+});
